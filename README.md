@@ -2,20 +2,16 @@
 
 A Node based proxy app to convert data from [home-assistant-flightradar24](https://github.com/AlexandrErohin/home-assistant-flightradar24) custom integration to GeoJSON format.
 
-[![GitHub Release][releases-shield]][releases]
-[![License][license-shield]](LICENSE.md)
-[![GitHub Activity][commits-shield]][commits]
-
 ## What is it?
 
 A proxy application that requests FlightRadar24 data from Home Assistant's API and converts it to GeoJSON format to be used by Home Assistant's [GeoJSON integration](https://www.home-assistant.io/integrations/geo_json_events/).
 
 ## Options (config.json)
 
-| Name           | Type    | Requirement  | Description                                       | Default             |
-| ---------------| ------- | ------------ | ------------------------------------------------- | ------------------- |
-| API_URL        | string  | **Required** | URL pointing to FR24 sensor's API endpoint        | `http://homeassistant.localdomain:8123/api/states/sensor.flightradar24_current_in_area`                    |
-| TOKEN          | string  | **Required** | API token from Home Assistant                     |                     |
+| Name           | Type    | Requirement  | Description                                       | 
+| ---------------| ------- | ------------ | ------------------------------------------------- | 
+| API_URL        | string  | **Required** | URL pointing to FR24 sensor's API endpoint        | 
+| TOKEN          | string  | **Required** | API token from Home Assistant                     | 
 
 ## How to install
 
@@ -50,6 +46,8 @@ action:
       entry_id: 9506910978c053b5ff8ec916067b1103
 mode: single
 ```
+You can find the entry_id from /config/.storage/core.config_entries file, you need to use File Editor addon or similar tool to access it.
+
 
 4. Add a map card to your dashboard. Here is an example yaml for one:
 
@@ -58,3 +56,7 @@ type: map
 geo_location_sources:
   - geo_json_events
 ```
+
+And here is the end result:
+
+![fr24_proxy](fr24_proxy.png)
