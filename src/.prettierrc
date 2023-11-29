@@ -1,0 +1,14 @@
+{
+	"disableLanguages": [],
+	"useTabs": true,
+	"semi": true,
+	"singleQuote": true,
+	"trailingComma": "none",
+	"quoteProps": "consistent",
+	"jsxSingleQuote": true,
+	"bracketSpacing": true,
+	"bracketSameLine": true,
+	"arrowParens": "always",
+	"proseWrap": "never",
+	"printWidth": 140
+}

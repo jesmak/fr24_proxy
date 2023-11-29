@@ -1,0 +1,4 @@
+{
+	"API_URL": "http://homeassistant.localdomain:8123/api/states/sensor.flightradar24_current_in_area",
+	"TOKEN": "API_TOKEN_FROM_HOME_ASSISTANT"
+}
