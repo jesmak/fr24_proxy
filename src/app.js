@@ -1,13 +1,13 @@
-const express = require('express');
-const cors = require('cors');
-const config = require('./config.json');
-const fetch = require('node-fetch');
+import express from 'express';
+import cors from 'cors';
+import config from './config.json' assert { type: "json" };
+import fetch from 'node-fetch';
 
 const app = express();
 app.use(cors());
 
 app.get('/', async (req, res) => {
-	const url = config.HASS_LOCAL_URL;
+	const url = config.API_URL;
 
 	const options = {
 		method: 'GET',
